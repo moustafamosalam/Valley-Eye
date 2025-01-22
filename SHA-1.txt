@@ -1,0 +1,8 @@
+Variant: debug
+Config: debug
+Store: C:\Users\moust\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 6F:36:59:9E:6F:54:F7:55:54:50:2E:78:43:38:18:63
+SHA1: 42:7F:FB:16:D4:C1:8F:D5:AD:3F:A2:79:6A:6D:16:1A:D1:C5:27:C4
+SHA-256: 11:42:1A:40:D3:D9:6A:EB:00:AA:A5:37:A1:3D:F3:EA:83:7D:3C:B2:CA:A3:41:5C:37:D7:3B:35:13:81:22:7C
+Valid until: Wednesday 9 October 2052

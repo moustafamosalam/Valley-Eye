@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "858198827507",
+    "project_id": "weathertowers-7cdfb",
+    "storage_bucket": "weathertowers-7cdfb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858198827507:android:91d52b2a815f57f90ab286",
+        "android_client_info": {
+          "package_name": "com.example.weather_towers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO5l65DwrKFXM7eS-wVlKCVALs3RLwaUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
