@@ -18,11 +18,6 @@ class _HomePageState extends State<HomePage> {
           child: ConstrainedBox(
             constraints: BoxConstraints(minHeight: MediaQuery.of(context).size.height,),
             child: Container(
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                image: AssetImage('images/dark.png'),
-                fit: BoxFit.cover,
-              )),
               padding: const EdgeInsets.only(left: 10.0, bottom: 0.0, right: 10.0, top: 38.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +26,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                     child: Row(
                       children: [
-                        Icon(Icons.cell_tower, color: Colors.blueGrey, size: 25.r),
+                        Icon(Icons.cell_tower, color: Colors.black, size: 25.r),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0, left: 10.0),
                           child: Text(
@@ -40,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                                 fontSize: 25.r,
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w400,
-                                color: Colors.blueGrey,
+                                color: Colors.black,
                                 fontStyle: FontStyle.italic),
                           ),
                         ),
@@ -49,10 +44,10 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                    child: Container(height: 1.0, color: Colors.blueGrey),
+                    child: Container(height: 1.0, color: Colors.black),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 5.0),
+                    padding: const EdgeInsets.fromLTRB(10, 10.0, 10, 5.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [

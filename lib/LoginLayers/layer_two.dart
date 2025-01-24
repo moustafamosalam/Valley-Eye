@@ -15,7 +15,7 @@ class LayerTwo extends StatelessWidget {
         color: layerTwoBg,
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(60),
-            bottomLeft: Radius.circular(26.0),
+            bottomLeft: Radius.circular(15),
         ),
       ),
     );

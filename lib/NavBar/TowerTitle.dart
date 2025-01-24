@@ -25,7 +25,7 @@ class _TowerTitleState extends State<TowerTitle> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20.0, bottom: 20.0, right: 20.0, top: 40.0),
+      padding: const EdgeInsets.only(left: 10.0, bottom: 20.0, right: 10.0, top: 40.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -33,10 +33,10 @@ class _TowerTitleState extends State<TowerTitle> {
             children: [
               GestureDetector(
                   onTap: () {Navigator.pop(context);},
-                  child: const Icon(Icons.arrow_back_ios_outlined, color: Colors.blueGrey, size: 27)
+                  child: const Icon(Icons.arrow_back_ios_outlined, color: Colors.black, size: 22)
               ),
               const SizedBox(width: 7,),
-              const Icon(Icons.cell_tower, color: Colors.blueGrey, size: 29),
+              const Icon(Icons.cell_tower, color: Colors.black, size: 24),
               Padding(
                 padding: const EdgeInsets.only(top: 5.0, left: 10.0),
                 child: Text(
@@ -45,8 +45,7 @@ class _TowerTitleState extends State<TowerTitle> {
                       fontSize: 22.r,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w400,
-                      color: Colors.blueGrey,
-                      fontStyle: FontStyle.italic),
+                      color: Colors.black,),
                 ),
               ),
               Expanded(child: Container()),
@@ -76,9 +75,8 @@ class _TowerTitleState extends State<TowerTitle> {
             ],
           ),
           Container(
-            height: 2.0,
-            color: Colors.blueGrey,
-            width: (MediaQuery.of(context).size.width - 42),
+            height: 0.7,
+            color: Colors.black,
           ),
         ],
       ),

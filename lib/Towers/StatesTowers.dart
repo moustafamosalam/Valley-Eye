@@ -5,19 +5,19 @@ int stateNumber = 0;
 int valleyNumber = 0;
 
 List<String> statesList = <String> ['Sharjah', 'Ras-ElKhema', 'Al-Fujairah'];
-const List<String> valleyTypeList = <String> ['Internal', 'External Araby', 'External Oman'];
+const List<String> valleyTypeList = <String> ['Internal', 'External to Arabian Gulf Side', 'External Oman'];
 
 List<Widget> currentAvailableTowers = [];
 
 List<Widget> emptyState = [
-  SizedBox(height: 200.h,),
+  SizedBox(height: 400.h,),
   Center(
     child: Text('No Available Towers!',
       style: TextStyle(
           fontSize: 22.r,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
-          color: Colors.blueGrey,
+          color: Colors.black,
           fontStyle: FontStyle.italic
       ),
     ),

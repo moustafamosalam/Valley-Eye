@@ -39,7 +39,7 @@ class TowerReportButton extends StatelessWidget {
         width: Buttonwidth,
         height: 50.h,
         decoration: const BoxDecoration(
-          color: Color(0xFF024335),
+          color: Colors.black,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20),
               bottomRight: Radius.circular(20)),

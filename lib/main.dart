@@ -8,6 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:weather_towers/BackEnd/Data.dart';
 
 import 'package:provider/provider.dart';
+import 'package:weather_towers/Pages/onBoarding_Page.dart';
 import 'package:weather_towers/firebase_options.dart';
 
 initPermission() async{
@@ -28,23 +29,15 @@ void main() async{
   );
   initPermission();
   runApp(
-      DevicePreview(
-        enabled: false,
+    DevicePreview(
+        enabled: true,
         builder: (context) =>
             ChangeNotifierProvider<DataFetch>(
                 create: (context) => DataFetch(),
                 child: const MyApp()
             )
-      ),
+    ),
   );
-      //MaterialApp(
-    //title: 'Login Demo',
-    // theme: ThemeData(
-    //   fontFamily: 'Poppins',
-    // ),
-    //debugShowCheckedModeBanner: false,
-    //home: LoginPage(),
-  // ));
 }
 
 class MyApp extends StatelessWidget {
@@ -60,13 +53,14 @@ class MyApp extends StatelessWidget {
         title: 'Weather Towers',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white.withOpacity(1),
           primarySwatch: Colors.grey,
           primaryColor: Colors.white,
           textTheme: TextTheme(
             bodyMedium: TextStyle(color: Colors.grey[300], fontFamily: 'Poppins'),
           ),
         ),
-        home: const LoginPage(),
+        home: const OnboardingPage(),
       ),
     );
   }

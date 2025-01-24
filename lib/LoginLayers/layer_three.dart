@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_towers/LoginLayers/config.dart';
 import 'package:weather_towers/BackEnd/SignIn.dart';
+import 'package:weather_towers/shared/custom_button.dart';
 
 final emailController = TextEditingController();
 final passwordController = TextEditingController();
@@ -29,7 +30,7 @@ class LayerThree extends StatelessWidget {
                 'Email',
                 style: TextStyle(
                     fontFamily: 'Poppins-Medium',
-                    color: const Color(0xFF024335),
+                    color: Colors.black,
                     fontSize: 20.r,
                     fontWeight: FontWeight.w400),
               ),
@@ -43,8 +44,13 @@ class LayerThree extends StatelessWidget {
                   child: TextField(
                     controller: emailController,
                     keyboardType: TextInputType.text,
+                    style: const TextStyle(color: Colors.black),
+                    cursorColor: Colors.black,
                     decoration: const InputDecoration(
                       border: UnderlineInputBorder(),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
                       hintText: 'Email@gmail.com',
                       hintStyle: TextStyle(color: hintText),
                       labelStyle: TextStyle(color: hintText),
@@ -59,7 +65,7 @@ class LayerThree extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: 'Poppins-Medium',
                     fontSize: 20.r,
-                    color: const Color(0xFF024335),
+                    color: Colors.black,
                     fontWeight: FontWeight.w400),
               ),
             ),
@@ -72,9 +78,15 @@ class LayerThree extends StatelessWidget {
                   child: TextField(
                     controller: passwordController,
                     keyboardType: TextInputType.text,
+                    style: const TextStyle(color: Colors.black),
                     obscureText: true,
+                    obscuringCharacter: "*",
+                    cursorColor: Colors.black,
                     decoration: const InputDecoration(
                       border: UnderlineInputBorder(),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
                       hintText: '*******',
                       hintStyle: TextStyle(color: hintText),
                       labelStyle: TextStyle(color: hintText),
@@ -83,7 +95,7 @@ class LayerThree extends StatelessWidget {
                 )),
             Positioned(
                 left: ((46/411.43) * screenWidth),
-                top: ((342/867.43) * screenHeight),
+                top: ((275/867.43) * screenHeight),
                 child: Row(
                   children: [
                     Checkbox(
@@ -97,7 +109,7 @@ class LayerThree extends StatelessWidget {
                     Text(
                       'Remember Me?',
                       style: TextStyle(
-                          color: forgotPasswordText,
+                          color: Colors.black,
                           fontSize: 13.r,
                           fontFamily: 'Poppins-Medium',
                           fontWeight: FontWeight.w500),
@@ -105,40 +117,30 @@ class LayerThree extends StatelessWidget {
                   ],
                 )),
             Positioned(
-                top: ((346/867.43) * screenHeight),
+                top: ((280/867.43) * screenHeight),
                 right: ((60/411.43) * screenWidth),
                 child: GestureDetector(
                   onTap: (){firebaseSignIn(emailController.text, passwordController.text, context);},
-                  child: Container(
-                    width: ((99/411.43) * screenWidth),
-                    height: 35,
-                    decoration: const BoxDecoration(
-                      color: signInButton,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
-                      child: Text(
-                        'Sign In',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.r,
-                            fontFamily: 'Poppins-Medium',
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ),
-                  ),
+                  child: const CustomButton(buttonText: "Sign In", buttonWidth: 105, buttonHeight: 40,),
                 )),
             Positioned(
-                top: ((413/867.43) * screenHeight),
+                top: ((345/867.43) * screenHeight),
                 left: ((59/411.43) * screenWidth),
                 child: Container(
                   height: 0.5,
                   width: ((310/411.43) * screenWidth),
                   color: inputBorder,
+                )),
+            Positioned(
+                right: ((57/411.43) * screenWidth),
+                top: ((360/867.43) * screenHeight),
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14.r,
+                      fontFamily: 'Poppins-Medium',
+                      fontWeight: FontWeight.bold),
                 )),
           ],
         ),

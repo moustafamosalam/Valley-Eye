@@ -16,18 +16,23 @@ class DropDownMenu extends StatelessWidget {
     return GestureDetector(
       child: Row(
         children: [
-          Text(
-            stateTrueValleyFalse ? statesList[stateNumber] : valleyTypeList[valleyNumber],
-            style: TextStyle(
-                fontSize: 19.r,
+          Container(
+            constraints: BoxConstraints(maxWidth: 160.w),
+            child: Text(
+              stateTrueValleyFalse ? statesList[stateNumber] : valleyTypeList[valleyNumber],
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontSize: 18.r,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w400,
-                color: Colors.blueGrey,
-                fontStyle: FontStyle.italic),
+                color: Colors.black,
+                fontStyle: FontStyle.italic
+              ),
+            ),
           ),
           Icon(
             Icons.arrow_drop_down_sharp,
-            color: Colors.blueGrey,
+            color: Colors.black,
             size: 25.r,
           ),
         ],
@@ -38,13 +43,12 @@ class DropDownMenu extends StatelessWidget {
               ? [ Text(statesList[0]), Text(statesList[1]), Text(statesList[2])]
               : [ Text(valleyTypeList[0]), Text(valleyTypeList[1]), Text(valleyTypeList[2])],
           selectedItemIndex: stateTrueValleyFalse ? stateNumber : valleyNumber,
-          backgroundColor: Colors.blueGrey.shade900,
-          gradientColors: const [
-            Color(0xFF3f3f3f),
-            Color(0xFF607D8B)
-          ],
+          backgroundColor: Colors.black87,
+          closeIconColor: Colors.white,
+          buttonSingleColor: Colors.white,
+          buttonContent: const Text("Select", textAlign: TextAlign.center, style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500),),
           pickerTextStyle: TextStyle(
-            color: Colors.grey.shade400,
+            color: Colors.white,
             fontSize: 20.r,
             fontWeight: FontWeight.bold,
           ),
@@ -52,8 +56,9 @@ class DropDownMenu extends StatelessWidget {
             'Choose your valley:',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 18,
-                color: Colors.blueGrey.shade200),
+                fontSize: 19.r,
+                height: 3,
+                color: Colors.white),
           ),
           onSubmit: (dynamic number) async {
             stateTrueValleyFalse ? stateNumber = number : valleyNumber = number;
